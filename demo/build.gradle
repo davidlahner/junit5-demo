@@ -1,0 +1,6 @@
+dependencies {
+    compile "org.junit.jupiter:junit-jupiter-api"
+	compile 'org.mockito:mockito-core:2.+'
+    compile "org.mockito:mockito-junit-jupiter:2.+"
+    compile "org.junit.jupiter:junit-jupiter-params"
+}
