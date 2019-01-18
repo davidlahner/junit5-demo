@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
 
-public class AssertionsDemo {
+class AssertionsDemo {
 
     private Person person = new Person("John", "Doe");
     @Test

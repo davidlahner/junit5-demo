@@ -2,7 +2,7 @@ import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.fail;
 
-public class StandardTests {
+class StandardTests {
 
     @BeforeAll
     static void initAll() {

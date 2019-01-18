@@ -8,7 +8,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
-public class ParameterizedTestsCustomDemo {
+class ParameterizedTestsCustomDemo {
 
     @ParameterizedTest
     @ArgumentsSource(MyArgumentsProvider.class)

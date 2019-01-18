@@ -11,7 +11,7 @@ import java.util.concurrent.TimeUnit;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class ParameterizedTestsCsvDemo {
+class ParameterizedTestsCsvDemo {
     @ParameterizedTest
     @CsvSource({ "foo, 1", "bar, 2", "'baz, qux', 3" })
     void testWithCsvSource(String first, int second) {
