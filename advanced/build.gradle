@@ -1,3 +1,0 @@
-dependencies {
-    compile "org.junit.jupiter:junit-jupiter-params"
-}
