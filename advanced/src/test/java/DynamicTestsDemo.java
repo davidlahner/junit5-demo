@@ -14,15 +14,13 @@ import java.util.function.Function;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
-import org.junit.jupiter.api.DynamicNode;
-import org.junit.jupiter.api.DynamicTest;
-import org.junit.jupiter.api.Tag;
-import org.junit.jupiter.api.TestFactory;
+import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.function.ThrowingConsumer;
 
 class DynamicTestsDemo {
 
     // This will result in a JUnitException!
+    @Disabled
     @TestFactory
     List<String> dynamicTestsWithInvalidReturnType() {
         return Arrays.asList("Hello");

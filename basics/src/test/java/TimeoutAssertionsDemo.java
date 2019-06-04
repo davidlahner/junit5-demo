@@ -8,6 +8,7 @@ import static org.junit.jupiter.api.Assertions.assertTimeout;
 import static org.junit.jupiter.api.Assertions.assertTimeoutPreemptively;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 class TimeoutAssertionsDemo {
@@ -36,6 +37,7 @@ class TimeoutAssertionsDemo {
         assertEquals("hello world!", actualGreeting);
     }
 
+    @Disabled
     @Test
     void timeoutExceeded() {
         // The following assertion fails with an error message similar to:
@@ -46,6 +48,7 @@ class TimeoutAssertionsDemo {
         });
     }
 
+    @Disabled
     @Test
     void timeoutExceededWithPreemptiveTermination() {
         // The following assertion fails with an error message similar to:
