@@ -1,6 +1,5 @@
 dependencies {
     compile project(':basics')
-    compile "org.junit.jupiter:junit-jupiter-api"
-	compile 'org.mockito:mockito-core:2.+'
-    compile "org.mockito:mockito-junit-jupiter:2.+"
+	testCompile 'org.mockito:mockito-core:2.+'
+    testCompile "org.mockito:mockito-junit-jupiter:2.+"
 }
