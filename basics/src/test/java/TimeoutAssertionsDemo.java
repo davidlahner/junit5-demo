@@ -10,8 +10,20 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Timeout;
+import org.junit.jupiter.api.condition.EnabledOnOs;
+import org.junit.jupiter.api.condition.OS;
+
+import java.util.concurrent.TimeUnit;
 
 class TimeoutAssertionsDemo {
+
+    @Disabled
+    @Test
+    @Timeout(unit = TimeUnit.MICROSECONDS, value = 20)
+    void timeoutExceeded() throws InterruptedException {
+        Thread.sleep(200);
+    }
 
     @Test
     void timeoutNotExceeded() {
@@ -39,7 +51,7 @@ class TimeoutAssertionsDemo {
 
     @Disabled
     @Test
-    void timeoutExceeded() {
+    void timeoutExceededWithAssert() {
         // The following assertion fails with an error message similar to:
         // execution exceeded timeout of 10 ms by 91 ms
         assertTimeout(ofMillis(10), () -> {
@@ -48,6 +60,7 @@ class TimeoutAssertionsDemo {
         });
     }
 
+    @EnabledOnOs(OS.WINDOWS)
     @Disabled
     @Test
     void timeoutExceededWithPreemptiveTermination() {
